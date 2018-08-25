@@ -1,3 +1,18 @@
+"
+I am the root property for all other types of properties. 
+Most of the behavior is set here, while other specifics are set through descendants.
+
+    Instance Variables
+	autoGo:		<Object>
+	columnLabel:		<Object>
+	default:		<Object>
+	disabled:		<Object>
+	displayFormat:		<Object>
+	representative:		<Object>
+
+
+    Implementation Points
+"
 Class {
 	#name : #VisibleProperty,
 	#superclass : #VisibleElement,

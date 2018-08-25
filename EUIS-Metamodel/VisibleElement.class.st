@@ -1,3 +1,16 @@
+"
+This is the VisibleElement of EUIS metamodel.  Key element for all elements that need to be displayed.
+
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	component:		<Object>
+	label:		<Object>
+	visible:		<Object>
+
+
+    Implementation Points
+"
 Class {
 	#name : #VisibleElement,
 	#superclass : #Object,

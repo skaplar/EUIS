@@ -1,3 +1,15 @@
+"
+This class hold the forms that need to be mapped to concrete model (magritte for now).
+Task of this class is to iterate through the given forms and perform generation for all of them. 
+
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	expectedForms:		<Object> 
+
+
+    Implementation Points
+"
 Class {
 	#name : #FormsMapper,
 	#superclass : #Object,

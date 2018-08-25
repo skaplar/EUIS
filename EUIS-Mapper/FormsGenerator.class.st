@@ -1,3 +1,15 @@
+"
+This class generates Magritte forms.
+
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	form:		<Object> -> form from the EUIS metamodel to be generated
+	generatedClass:		<Object> -> class that is already generated and needs to hold rest of the data
+
+
+    Implementation Points
+"
 Class {
 	#name : #FormsGenerator,
 	#superclass : #Object,
@@ -44,18 +56,18 @@ FormsGenerator >> generateInstanceVariables [
 ]
 
 { #category : #accessing }
-FormsGenerator >> generateMaDescription: label [
+FormsGenerator >> generateMaDescription: element [
 	generatedClass
 		compile:
-			'description' , label asString , String cr , String tab , '<magritteDescription>' , String cr , String tab
-				, '^ MAStringDescription new' , String cr, 'accessor: #' , label asString , ';' , 'label: ''' , label asString , ''';'
-				, 'priority: 70;', 'yourself'
+			'description' , element label asString , String cr , String tab , '<magritteDescription>' , String cr , String tab
+				, element component magritteComponentDescription , String cr , 'accessor: #' , element label asString , ';' , 'label: '''
+				, element label asString , ''';' , 'priority: 70;' , 'yourself'
 ]
 
 { #category : #accessing }
 FormsGenerator >> generateMagritteMethods [
 	form visibleElements
-		do: [ :element | self generateMaDescription: element label ]
+		do: [ :element | self generateMaDescription: element ]
 ]
 
 { #category : #accessing }

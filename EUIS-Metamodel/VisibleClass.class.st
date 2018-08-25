@@ -1,3 +1,14 @@
+"
+I am root class for all other visible panels.
+
+    Instance Variables
+	modal:		<Object>
+	visibleClassName:		<Object>
+	visibleElements:		<Object>
+
+
+    Implementation Points
+"
 Class {
 	#name : #VisibleClass,
 	#superclass : #VisibleElement,

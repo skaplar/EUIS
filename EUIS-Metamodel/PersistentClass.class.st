@@ -1,3 +1,14 @@
+"
+I am class that needs to be persisted to db.
+
+    Instance Variables
+	identifier:		<Object>
+	identity:		<Object>
+	unique:		<Object>
+
+
+    Implementation Points
+"
 Class {
 	#name : #PersistentClass,
 	#superclass : #Object,

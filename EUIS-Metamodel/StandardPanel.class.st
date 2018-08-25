@@ -1,3 +1,12 @@
+"
+I am StandardPanel described in EUIS metamodel.
+
+    Instance Variables
+	persistentClass:		<Object>
+
+
+    Implementation Points
+"
 Class {
 	#name : #StandardPanel,
 	#superclass : #VisibleClass,

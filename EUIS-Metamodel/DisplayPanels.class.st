@@ -1,3 +1,14 @@
+"
+I am a class taht contants all the forms that need to be created and contain the concrete model.
+
+Internal Representation and Key Implementation Points.
+
+    Instance Variables
+	forms:		<Object>
+
+
+    Implementation Points
+"
 Class {
 	#name : #DisplayPanels,
 	#superclass : #Object,
@@ -47,15 +58,15 @@ DisplayPanels >> instanceCreateDemoForms [
 
 	self 
 	addStandardPanel: ((StandardPanel persistentClass: (PersistentClass identifier: 1 unique: true identity: 1 ) visibleClassName: 'Radnik'  modal: true )
-							addVisibleElement: (VisibleProperty columnLabel: 'ime' component: 'textField');
-							addVisibleElement: (VisibleProperty columnLabel: 'prezime' component: 'textField')
+							addVisibleElement: (VisibleProperty columnLabel: 'ime' component: TextFieldComponent new);
+							addVisibleElement: (VisibleProperty columnLabel: 'prezime' component: TextFieldComponent new)
 							);
 	addStandardPanel: ((StandardPanel persistentClass: (PersistentClass identifier: 2 unique: true identity: 2 ) visibleClassName: 'Magacin'  modal: true )
-							addVisibleElement: (VisibleProperty columnLabel: 'nazivMagacina' component: 'textField')
+							addVisibleElement: (VisibleProperty columnLabel: 'nazivMagacina' component: TextFieldComponent new)
 							);
 	addStandardPanel: ((StandardPanel persistentClass: (PersistentClass identifier: 3 unique: true identity: 3 ) visibleClassName: 'Roba'  modal: true )
-							addVisibleElement: (VisibleProperty columnLabel: 'nazivArtikla' component: 'textField');
-							addVisibleElement: (VisibleProperty columnLabel: 'cenaArtikla' component: 'textField')
+							addVisibleElement: (VisibleProperty columnLabel: 'nazivArtikla' component: TextFieldComponent new);
+							addVisibleElement: (VisibleProperty columnLabel: 'cenaArtikla' component: TextFieldComponent new)
 							)
 	
 ]
