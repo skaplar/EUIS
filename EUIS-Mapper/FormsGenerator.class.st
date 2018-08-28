@@ -56,6 +56,15 @@ FormsGenerator >> generateInstanceVariables [
 ]
 
 { #category : #accessing }
+FormsGenerator >> generateMaAccessors: element [
+	generatedClass
+		compile:
+			element label asString , String cr, String tab, ' ^ ', element label asString;
+		compile: 
+			element label asString, ': anObject', String cr, String tab, element label asString, ' := anObject'. 
+]
+
+{ #category : #accessing }
 FormsGenerator >> generateMaDescription: element [
 	generatedClass
 		compile:
@@ -67,7 +76,7 @@ FormsGenerator >> generateMaDescription: element [
 { #category : #accessing }
 FormsGenerator >> generateMagritteMethods [
 	form visibleElements
-		do: [ :element | self generateMaDescription: element ]
+		do: [ :element | self generateMaDescription: element; generateMaAccessors: element ]
 ]
 
 { #category : #accessing }
